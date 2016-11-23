@@ -1,6 +1,27 @@
-class Observer{
-    onChange(task:Task){  
+class Observer {
+    onChange(task: Task) {
     }
+}
+
+class TaskCondition {
+    onAccept(task) {
+
+    }
+    onsubmit(task) {
+
+    }
+}
+
+class NPCTalkTaskCondition extends TaskCondition {
+    constructor(){
+        super();
+    }
+//    onAccept(task) {
+//
+//    }
+//    onsubmit(task) {
+//
+//    }
 }
 
 class Task {
@@ -11,12 +32,12 @@ class Task {
     fromNpcId: string;
     toNpcId: string;
     public constructor(id, name, desc, status, fromNpcId, toNpcId) {
-        this.id=id;
-        this.name=name;
-        this.desc=desc;
-        this.status=status;
-        this.fromNpcId=fromNpcId;
-        this.toNpcId=toNpcId;
+        this.id = id;
+        this.name = name;
+        this.desc = desc;
+        this.status = status;
+        this.fromNpcId = fromNpcId;
+        this.toNpcId = toNpcId;
     }
 }
 
