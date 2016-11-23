@@ -7,6 +7,26 @@ var Observer = (function () {
     return Observer;
 }());
 egret.registerClass(Observer,'Observer');
+var TaskCondition = (function () {
+    function TaskCondition() {
+    }
+    var d = __define,c=TaskCondition,p=c.prototype;
+    p.onAccept = function (task) {
+    };
+    p.onsubmit = function (task) {
+    };
+    return TaskCondition;
+}());
+egret.registerClass(TaskCondition,'TaskCondition');
+var NPCTalkTaskCondition = (function (_super) {
+    __extends(NPCTalkTaskCondition, _super);
+    function NPCTalkTaskCondition() {
+        _super.call(this);
+    }
+    var d = __define,c=NPCTalkTaskCondition,p=c.prototype;
+    return NPCTalkTaskCondition;
+}(TaskCondition));
+egret.registerClass(NPCTalkTaskCondition,'NPCTalkTaskCondition');
 var Task = (function () {
     function Task(id, name, desc, status, fromNpcId, toNpcId) {
         this.id = id;

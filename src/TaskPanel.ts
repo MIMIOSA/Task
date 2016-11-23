@@ -6,19 +6,19 @@ class TaskPanel implements Observer {
 	private currentTaskId: string;
 	private currentTaskStatus: number;
 
-	private bgColor_Task = 0xd6ecf0;              //Task Panel
+	private bgColor_Task = 0x00559d;              //Task Panel
 	private rectTaskPanel: egret.Shape;
 	private panelX = 0;
 	private panelY = 0;
-	private panelWidth = 250;
+	private panelWidth = 300;
 	private panelHeight = 200;
 
 
 	private taskNameTextField: egret.TextField;
 	private taskNameTextFieldText = "Task Panel";
-	private taskNameTextFieldX = 46;
+	private taskNameTextFieldX = 70;
 	private taskNameTextFieldY = 25;
-	private taskNameTextFieldWidth = 200;
+	private taskNameTextFieldWidth = 300;
 	private taskNameTextFieldColor = 0x000000;
 
 	private taskStateText: egret.TextField;       //状态
@@ -31,14 +31,14 @@ class TaskPanel implements Observer {
 	private button: egret.DisplayObjectContainer;
 	private rectButton: egret.Shape;
 	private buttonColor = 0xeaffb1;
-	private buttonX = 50;
+	private buttonX =60;
 	private buttonY = 130;
-	private buttonWidth = 150;
+	private buttonWidth = 180;
 	private buttonHeight = 45;
 
 	private buttonTextField: egret.TextField;
 	private buttonText = "No Task";
-	private buttonTextX = this.buttonX + 5;
+	private buttonTextX = this.buttonX + 12;
 	private buttonTextY = this.buttonY + 10;
 	private buttonTextWidth = 180;
 	private buttonTextColor = 0x808080;     //grey

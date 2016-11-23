@@ -28,7 +28,7 @@ var NPC = (function () {
     }
     var d = __define,c=NPC,p=c.prototype;
     p.getTask = function () {
-        this.task = this.taskService.getTaskByCustomRole(this.rule, this.npcId);
+        this.task = this.taskService.getTask(this.rule, this.npcId);
         console.log("This Task State: " + this.task.status);
         this.checkState();
     };
@@ -102,7 +102,7 @@ var NPC = (function () {
     p.onNpcClick = function (e, task, npcid) {
         if (task === void 0) { task = this.task; }
         if (npcid === void 0) { npcid = this.npcId; }
-        this.taskService.checkTaskRules(task, npcid, this.NPCtalkpanel);
+        this.taskService.checkTaskStatus(task, npcid, this.NPCtalkpanel);
     };
     p.onChange = function (task) {
         this.task = task;

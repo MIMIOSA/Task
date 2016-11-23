@@ -53,7 +53,7 @@ class NPC implements Observer {
     }
 
     getTask() {
-        this.task = this.taskService.getTaskByCustomRole(this.rule, this.npcId);
+        this.task = this.taskService.getTask(this.rule, this.npcId);
         console.log("This Task State: " + this.task.status);
         this.checkState();
     }
@@ -135,7 +135,7 @@ class NPC implements Observer {
     }
 
     onNpcClick(e: egret.TouchEvent, task: Task = this.task, npcid: string = this.npcId) {
-        this.taskService.checkTaskRules(task, npcid, this.NPCtalkpanel);
+        this.taskService.checkTaskStatus(task, npcid, this.NPCtalkpanel);
     }
 
     onChange(task: Task) {
